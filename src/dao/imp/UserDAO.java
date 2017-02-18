@@ -10,6 +10,8 @@ import domain.User;
 
 /**
  * Created by ki264 on 2017/2/17.
+ *
+ *
  */
 public class UserDAO implements IUserDAO {
 
@@ -50,7 +52,7 @@ public class UserDAO implements IUserDAO {
     public User getUserById(String id) {
         IDatabaseDAO myDB = new DatabaseDAO();
         User user = new User();
-        String sql = "select * from user where ID='" + id + "'";
+        String sql = "select * from users where ID='" + id + "'";
 
         try {
             ResultSet resultSet = myDB.getResultSet(sql);
@@ -71,17 +73,24 @@ public class UserDAO implements IUserDAO {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
         }
 
         return user;
     }
 
+    /**
+     * 根據userName查詢資料庫中的使用者資訊。
+     *
+     * @param userName
+     * @return List<User> 符合條件的使用者清單
+     */
     @Override
     public List<User> getUserByUserName(String userName) {
         IDatabaseDAO myDB = new DatabaseDAO();
         User user = new User();
         List<User> list = new ArrayList<User>();
-        String sql = "";
+        String sql = "select * from users where UserName='" + userName + "'";
         try {
             ResultSet resultSet = myDB.getResultSet(sql);
 
@@ -111,7 +120,13 @@ public class UserDAO implements IUserDAO {
 
 
     public static void main(String[] args) {
-        User user = new User("name", "password", "realname", "m", 15, "personalsignature");
-        new UserDAO().addUser(user);
+        //        User user = new User("name", "password", "realname", "m", 15, "personalsignature");
+        //        new UserDAO().addUser(user);
+        //        List<User> list = new UserDAO().getUserByUserName("name");
+        //        System.out.println(((User) list.get(0)).getId());
+
+        User user = new UserDAO().getUserById("1");
+        System.out.println(user.getRealName());
+
     }
 }

@@ -2,6 +2,8 @@ package domain;
 
 /**
  * Created by ki264 on 2017/2/17.
+ * <p>
+ * 使用者類別
  */
 public class User {
     private String id;
