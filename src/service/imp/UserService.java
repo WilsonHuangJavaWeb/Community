@@ -2,7 +2,6 @@ package service.imp;
 
 import java.util.List;
 
-import dao.IUserDAO;
 import dao.imp.UserDAO;
 import domain.User;
 import service.IUserService;
@@ -11,7 +10,7 @@ import service.IUserService;
  * Created by ki264 on 2017/2/17.
  */
 public class UserService implements IUserService {
-    private IUserDAO userDAO = new UserDAO();
+    private UserDAO userDAO = new UserDAO();
 
     public UserService() {
     }
@@ -93,5 +92,12 @@ public class UserService implements IUserService {
         } else {
             return false;
         }
+    }
+
+    public static void main(String[] args) {
+        User user = new User("userName2", "password", "realName", "m", 15, "personalSignature");
+
+        UserService userService=new UserService();
+        userService.addUser(user);
     }
 }

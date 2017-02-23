@@ -28,7 +28,7 @@ public class DatabaseDAO implements IDatabaseDAO {
         Class.forName("com.mysql.jdbc.Driver");
 
         //初始化資料庫連接字串並指定字元編碼集
-        String connStr = "jdbc:mysql://localhost:3306/community?useUnicode=true&characterEncoding=utf-8";
+        String connStr = "jdbc:mysql://localhost:3306/community?useUnicode=true&characterEncoding=utf-8&useSSL=true";
 
         //宣告並初始化料庫使用者名稱和密碼
         String user = "root";

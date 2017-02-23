@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Community" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="D:/Google 雲端硬碟/3th_party/mysql-connector-java-6.0.5-bin.jar" />
+        </element>
       </element>
     </root>
   </artifact>
