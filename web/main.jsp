@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="domain.Information" %><%--
+<%@ page import="domain.Information" %>
+<%@ page import="domain.User" %><%--
   Created by IntelliJ IDEA.
   User: ki264
   Date: 2017/2/23
@@ -74,7 +75,16 @@
             <%--primany content end--%>
         </div>
         <div id="secondarycontent">
-
+            <%--secondary content start--%>
+            <h3><%=((User) session.getAttribute("user")).getUserName()%>
+            </h3>
+            <div class="content">
+                <p><a href="addinformation.jsp">發布資訊</a></p>
+            </div>
+            <%--secondary content end--%>
+        </div>
+        <div id="footer">
+            &copy;社區小組. All right reserved. Design by 社區小組.
         </div>
     </div>
 </div>
