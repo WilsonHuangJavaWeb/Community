@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="lib">
+    <archive path="C:/Users/ki264/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/src/lib/jboss-common-jdbc-wrapper.jar" />
+    <archive path="C:/Users/ki264/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/src/lib/c3p0-0.9.1-pre6.jar" />
+    <archive path="C:/Users/ki264/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/src/lib/jboss-common-jdbc-wrapper-src.jar" />
+    <archive path="C:/Users/ki264/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/src/lib/c3p0-0.9.1-pre6.src.zip" />
+    <archive path="C:/Users/ki264/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/src/lib/slf4j-api-1.6.1.jar" />
+  </library>
+  <library name="mysql-connector-java-5.1.40-bin">
+    <archive path="C:/Users/ki264/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar" />
+  </library>
+</eclipse-userlibraries>
+

@@ -1,7 +1,6 @@
 package dao.imp;
 
 import java.sql.ResultSet;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,10 +24,8 @@ public class InfoDAO implements IInfoDAO {
     @Override
     public void addInfo(Information information) {
 
-        String format = ("yyyy-MM-dd hh:mm:ss");
 
         //取得具有特定格式的資料發布時間
-        String myTime = new SimpleDateFormat(format).format(information.getPublishingTime());
         IDatabaseDAO myDB = new DatabaseDAO();
         String sql = "insert into information(Title,Content,PublishingTime,PublishingUser,Type) values(" +
                 "'" + information.getTitle() + "'," +
